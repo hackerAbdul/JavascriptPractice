@@ -1,0 +1,67 @@
+const getSleepHours = (day) => {
+    switch (day) {
+        case "Monday":
+            return 8;
+            break;
+        case "Tuesday":
+            return 4;
+            break;
+        case "Wednesday":
+            return 5;
+            break;
+        case "Thursday":
+            return 2;
+            break;
+        case "Friday":
+            return 7;
+            break;
+        case "Saturday":
+            return 6;
+            break;
+        case "Sunday":
+            //console.log(9);
+            return 9;
+            break;
+    }
+}
+
+function getActualSleepHours() {
+    results = getSleepHours("Monday") + getSleepHours("Tuesday") +
+        getSleepHours("Wednesday") + getSleepHours("Thursday") +
+        getSleepHours("Friday") + getSleepHours("Saturday") + getSleepHours("Sunday")
+    console.log(`You have slept ${results}`);
+    return results;
+}
+
+function getIdealSleepHours() {
+    let idealHours = 8
+    console.log(`your ideal sleep hours for the week is ${idealHours*7}`)
+    return idealHours * 7
+}
+
+function sleepDebt() {
+    actualSleepHours = getActualSleepHours()
+    idealSleepHours = getIdealSleepHours()
+
+    if (actualSleepHours === idealSleepHours) {
+        console.log("You got the perfect amount of sleep!");
+    }
+    else if (actualSleepHours > idealSleepHours) {
+        overslept = actualSleepHours - idealSleepHours
+        console.log(`You over slept by ${overslept} hours`)
+    }
+    else if (actualSleepHours < idealSleepHours) {
+        underslept = idealSleepHours - actualSleepHours
+        console.log(`You are in sleep debt of ${underslept} hours`)
+    }
+    else {
+        return Null
+    }
+}
+
+
+//getSleepHours("Sunday")
+
+//getActualSleepHours();
+//getIdealSleepHours();
+sleepDebt();
