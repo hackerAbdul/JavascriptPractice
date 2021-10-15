@@ -21,7 +21,16 @@ jokes_bank = {
     
     "How does the moon cut his hair?": "Eclipse it.",
     
-    "How do you talk to a giant?": "Use big words."}
-;
+    "How do you talk to a giant?": "Use big words."};
 
-console.log(Object.keys(jokes_bank));
+//console.log(Object.keys(jokes_bank).length);
+
+//jokes_bank.forEach(element => {console.log(element)});
+
+function random(dict){
+    a = Math.floor(Math.random()* Object.keys(dict).length + 1)
+    console.log(a);
+    console.log(Object.entries(dict)[a]);
+}
+
+random(jokes_bank);
