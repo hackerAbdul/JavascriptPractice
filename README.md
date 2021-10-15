@@ -1,2 +1,3 @@
 # JavascriptPractice
-Practicing JavaScript with small Projects 
+Improving JavaScript Profeciency by doing projects with java script the will enhance and hone my skills using the JS language
+
