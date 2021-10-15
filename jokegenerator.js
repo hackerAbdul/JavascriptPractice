@@ -23,14 +23,18 @@ jokes_bank = {
     
     "How do you talk to a giant?": "Use big words."};
 
-//console.log(Object.keys(jokes_bank).length);
 
-//jokes_bank.forEach(element => {console.log(element)});
 
+
+//random generator function 
 function random(dict){
-    a = Math.floor(Math.random()* Object.keys(dict).length + 1)
-    console.log(a);
-    console.log(Object.entries(dict)[a]);
+    //create the randomiser
+    randomiser = Math.floor(Math.random()* Object.keys(dict).length)
+    console.log(randomiser);
+    //will store the joke as an array
+    joke_made = (Object.entries(dict)[randomiser]);
+    //finally calls on the joke via the position of its key value pair
+    console.log(`${joke_made[0]}: ${joke_made[1]}`)
 }
 
 random(jokes_bank);
